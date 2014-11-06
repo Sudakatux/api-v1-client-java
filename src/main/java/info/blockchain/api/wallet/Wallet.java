@@ -111,7 +111,7 @@ public class Wallet
 		if (note != null)
 			params.put("note", note);
 		
-		String response = HttpClient.post(String.format("merchant/%s/%s",
+		String response = HttpClient.get(String.format("merchant/%s/%s",
 				identifier, method), params);
 		JsonObject topElem = parseResponse(response);
 		
